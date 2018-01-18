@@ -1,0 +1,23 @@
+/**
+ * @version    3.0.x
+ * @package    GridGallery
+ * @author     SPEDI srl http://www.spedi.it
+ * @copyright  Copyright (c) Spedi srl.
+ * @license    GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
+ */
+.gallery-module.slide-auto-layout{
+  .title-section{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .grid-gallery{
+    .swiper-slide{
+      width: auto;
+      img{
+        display: block;
+        height: 200px;
+        // max-width: 100%;
+      }
+    }
+  }
+}

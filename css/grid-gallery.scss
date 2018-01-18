@@ -1,0 +1,67 @@
+/**
+ * @version    3.0.x
+ * @package    GridGallery
+ * @author     SPEDI srl http://www.spedi.it
+ * @copyright  Copyright (c) Spedi srl.
+ * @license    GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
+ */
+.gallery-module.grid-layout{
+  .title-section{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .grid-gallery{
+    .image{
+      // height: 200px;
+      padding: 0;
+      overflow: hidden;
+      @media(max-width:786px){
+        height: 150px !important;
+      }
+      figure{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        margin: 0;
+        img{
+          -o-object-fit: cover;
+             object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+
+        figcaption{
+          position: absolute;
+          top: -150px;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          // background-color: #000;
+          // color: #fff;
+          -webkit-transform: translate(0, 0);
+                  transform: translate(0, 0);
+          transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          -webkit-transition: all 0.3s ease-in-out;
+          // p{
+          //   color: #fff;
+          // }
+        }
+      }
+
+      &:hover{
+        figcaption{
+          opacity: 0.8;
+          -webkit-transform: translate(0, 150px);
+                  transform: translate(0, 150px);
+          transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          -webkit-transition: all 0.3s ease-in-out;
+        }
+      }
+
+    }
+  }
+}

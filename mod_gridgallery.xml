@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+  <name>MOD_GRIDGALLERY</name>
+	<author>SPEDI srl</author>
+	<creationDate>Novembre 2017</creationDate>
+  <copyright>Copyright (C) SPEDI srl</copyright>
+	<license>GNU/GPL license: http://www.gnu.org/copyleft/gpl.html</license>
+	<authorEmail>sviluppo@spedi.it</authorEmail>
+	<authorUrl>http://www.spedi.it</authorUrl>
+	<version>3.0.0</version>
+	<description>MOD_GRIDGALLERY_DESC</description>
+
+    <files>
+      <filename>mod_gridgallery.xml</filename>
+      <filename module="mod_gridgallery">mod_gridgallery.php</filename>
+      <filename>index.html</filename>
+      <filename>helper.php</filename>
+      <folder>tmpl</folder>
+      <folder>css</folder>
+      <folder>models</folder>
+      <folder>language</folder>
+      <folder>dist</folder>
+    </files>
+    <config>
+      <fields name="params" addfieldpath="/modules/mod_gridgallery/models/fields">
+          <fieldset name="basic">
+
+            <field
+              name="jquery-load"
+              type="radio"
+              label="MOD_GRIDGALLERY_EXT_JQUERY_LOAD"
+              description="MOD_GRIDGALLERY_EXT_JQUERY_LOAD_DESC"
+              class="btn-group btn-group-yesno"
+              default="1"
+              >
+              <option value="1">JYES</option>
+              <option value="0">JNO</option>
+            </field>
+
+            <field
+              name="magnific"
+              type="radio"
+              label="MOD_GRIDGALLERY_EXT_MAGNIFIC"
+              description="MOD_GRIDGALLERY_EXT_MAGNIFIC_DESC"
+              class="btn-group btn-group-yesno"
+              default="1"
+              >
+              <option value="1">JYES</option>
+              <option value="0">JNO</option>
+            </field>
+
+            <!-- <field
+              name="masonry"
+              type="radio"
+              label="MOD_GRIDGALLERY_EXT_MASONRY"
+              description="MOD_GRIDGALLERY_EXT_MASONRY_DESC"
+              class="btn-group btn-group-yesno"
+              default="1"
+              >
+              <option value="1">JYES</option>
+              <option value="0">JNO</option>
+            </field> -->
+
+            <field
+              name="catid"
+              type="phocagallerycategory"
+              label="MOD_GRIDGALLERY_EXT_CATID"
+              description="MOD_GRIDGALLERY_EXT_CATID_DESC"
+              multiple="true"
+            />
+
+            <field
+              name="description"
+              type="textarea"
+              label="MOD_GRIDGALLERY_EXT_DESCRIPTION"
+              description="MOD_GRIDGALLERY_EXT_DESCRIPTION_DESC"
+            />
+
+            <field
+              name="image"
+              type="text"
+              label="MOD_GRIDGALLERY_EXT_IMAGE"
+              description="MOD_GRIDGALLERY_EXT_IMAGE_DESC"
+            />
+
+            <field
+              name="limit"
+              type="text"
+              label="MOD_GRIDGALLERY_EXT_LIMIT"
+              description="MOD_GRIDGALLERY_EXT_LIMIT_DESC"
+              filter="numeric"
+              default="20"
+            />
+
+            <field
+              name="margin"
+              type="number"
+              default="0"
+              label="MOD_GRIDGALLERY_MARGIN"
+              description="MOD_GRIDGALLERY_MARGIN_DESC"
+              min="0"
+              max="20"
+              step="1"
+            />
+
+            <field
+              name="num-line"
+              type="list"
+              label="MOD_GRIDGALLERY_NUM"
+              description="MOD_GRIDGALLERY_NUM_DESC"
+              class="btn-group btn-group-yesno"
+              default="4"
+              >
+              <option value="12">1</option>
+              <option value="6">2</option>
+              <option value="4">3</option>
+              <option value="3">4</option>
+              <option value="2">6</option>
+              <option value="1">12</option>
+            </field>
+
+            <field
+              name="container"
+              type="radio"
+              label="MOD_GRIDGALLERY_CONTAINER"
+              description="MOD_GRIDGALLERY_CONTAINER_DESC"
+              class="btn-group btn-group-yesno"
+              default="1"
+              >
+              <option value="1">JYES</option>
+              <option value="0">JNO</option>
+            </field>
+
+            <field
+              name="photo-height"
+              type="text"
+              label="MOD_GRIDGALLERY_PHOTOHEIGHT"
+              description="MOD_GRIDGALLERY_PHOTOHEIGHT_DESC"
+              filter="numeric"
+              default="200"
+            />
+
+            <field
+              name="image-overlay-color"
+              type="color"
+              label="MOD_GRIDGALLERY_OVERLAY_COLOR"
+              description="MOD_GRIDGALLERY_OVERLAY_COLOR_DESC"
+              default="#000000"
+            />
+
+            <field
+              name="image-text-color"
+              type="color"
+              label="MOD_GRIDGALLERY_TEXT_COLOR"
+              description="MOD_GRIDGALLERY_TEXT_COLOR_DESC"
+              default="#ffffff"
+            />
+
+            <field
+              name="shuffle"
+              type="radio"
+              label="MOD_GRIDGALLERY_SHUFFLE"
+              description="MOD_GRIDGALLERY_SHUFFLE_DESC"
+              class="btn-group btn-group-yesno"
+              default="0"
+              >
+              <option value="1">JYES</option>
+              <option value="0">JNO</option>
+            </field>
+
+            <field
+              name="link-yn"
+              type="radio"
+              label="MOD_GRIDGALLERY_EXT_LINK_YN"
+              description="MOD_GRIDGALLERY_EXT_LINK_YN_DESC"
+              class="btn-group btn-group-yesno"
+              default="0"
+              >
+              <option value="1">JYES</option>
+              <option value="0">JNO</option>
+            </field>
+
+            <field
+              name="link-text"
+              type="text"
+              label="MOD_GRIDGALLERY_EXT_ALBUM_TEXT"
+              description="MOD_GRIDGALLERY_EXT_ALBUM_TEXT_DESC"
+              default="Tutti gli album"
+              showon="link-yn:1"
+            />
+
+            <field
+              name="link"
+              type="text"
+              label="MOD_GRIDGALLERY_EXT_ALBUM_LINK"
+              description="MOD_GRIDGALLERY_EXT_ALBUM_LINK_DESC"
+              default="http://www.example.it"
+              showon="link-yn:1"
+            />
+
+          </fieldset>
+
+          <fieldset name="advanced">
+    				<field
+    					name="layout"
+    					type="modulelayout"
+    					label="JFIELD_ALT_LAYOUT_LABEL"
+    					description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+    				/>
+          </fieldset>
+
+      </fields>
+
+    </config>
+</extension>

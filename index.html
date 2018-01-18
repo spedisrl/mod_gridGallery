@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Grid Gallery - Joomla Module (by SPEDI srl)</title>
+    <meta name="description" content="Grid Gallery è un modulo Joomla 3.x, creato con Bootstrap 4, HTML5 e CSS3. Puoi generare 4 fantastici layout per le tue gallerie di foto.">
+
+    <meta property="og:title" content="Grid Gallery è un modulo Joomla 3.x, creato con Bootstrap 4, HTML5 e CSS3." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://spedisrl.github.io/mod_gridGallery/" />
+    <meta property="og:image" content="https://www.spedi.it/media/k2/items/cache/39a27618f1dc54b80987c6706135e6b7_M.jpg" />
+    <meta property="og:site_name" content="Grid Gallery - Joomla Module (by SPEDI srl)" />
+    <meta property="og:description" content="Grid Gallery è un modulo Joomla 3.x, creato con Bootstrap 4, HTML5 e CSS3. Puoi generare 4 fantastici layout per le tue gallerie di foto." />
+
+    <meta name="twitter:title" content="Grid Gallery è un modulo Joomla 3.x, creato con Bootstrap 4, HTML5 e CSS3.">
+    <meta name="twitter:image" content="https://www.spedi.it/media/k2/items/cache/39a27618f1dc54b80987c6706135e6b7_M.jpg">
+    <meta name="twitter:site" content="https://spedisrl.github.io/mod_gridGallery/">
+    <meta name="twitter:description" content="Grid Gallery è un modulo Joomla 3.x, creato con Bootstrap 4, HTML5 e CSS3. Puoi generare 4 fantastici layout per le tue gallerie di foto." />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="dist/magnific/magnific-popup.min.css">
+    <link rel="stylesheet" href="dist/swiper/swiper.min.css">
+    <link rel="stylesheet" href="css/grid-gallery-masonry.min.css">
+    <link rel="stylesheet" href="css/grid-gallery.min.css">
+    <link rel="stylesheet" href="css/isotope.min.css">
+    <link rel="stylesheet" href="css/slide-auto.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    <script src="dist/magnific/jquery.magnific-popup.min.js"></script>
+    <script src="dist/isotope/isotope.min.js"></script>
+    <script src="dist/swiper/swiper.min.js"></script>
+    <script src="dist/masonry/masonry.min.js"></script>
+    <script src="dist/masonry/lazyload.min.js"></script>
+
+
+    <style media="screen">
+      .bg-light{background-color:#e9ecef!important;}
+      a:hover{text-decoration: none;}
+      h3,h4{color:#343a40;}
+      h3.title-section{position: relative;margin-bottom:20px;}
+      h3.title-section::after{position:absolute;content:'';bottom:-10px;left:0;width:50px;height:5px;background-color:#17a2b8;}
+      h3.display-4{font-size:35px;}
+      h4.display-4{font-size:35px;}
+      .dipendence-list > li{position: relative;}
+      .dipendence-list > li > a{padding-right:5px;font-weight:300;font-size:20px;color:#343a40;}
+      .dipendence-list > li:after{position: relative;content:'\f111';font-family:'FontAwesome';font-size:5px;bottom:4px;}
+      .dipendence-list > li:last-child::after{display:none;}
+      .btn-download::after{position:relative;content:'\f019';font-family:'FontAwesome';margin-left:5px;}
+      .btn-github::after{position:relative;content:'\f09b';font-family:'FontAwesome';margin-left:5px;}
+      footer p{font-size: 14px!important;}
+    </style>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-112603764-2']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0">
+      <div class="container">
+        <a class="navbar-brand" href="https://www.spedi.it" title="SPEDI srl" target="_blank">
+          <img src="https://www.spedi.it/images/spedi-brand/SPEDI_logo_bianco_full.png" height="70" alt="SPEDI srl">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#demo">Demo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#license">Licenza</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#credits">Crediti</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/spedisrl/mod_gridGallery" target="_blank" title="Vedi su GitHub">GitHub <i class="fa fa-github" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container text-center">
+        <h1 class="display-4">Grid Gallery</h1>
+        <p class="lead">Joomla! 3.x Module</p>
+        <p class="lead">Grid Gallery è un modulo Joomla che crea 4 differenti e fantastici layout di foto prese dagli album di phocagallery.</p>
+        <p class="lead">E' necessario avere installato sul proprio sito Joomla il componente Phocagallery.</p>
+        <div class="text-center">
+          <ul class="list-inline dipendence-list">
+            <li class="list-inline-item">
+              <a href="#">HTML5/CSS3</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://getbootstrap.com/" target="_blank">Bootstrap 4</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://fontawesome.com" target="_blank">Font Awesome 5</a>
+            </li>
+          </ul>
+        </div>
+        <div class="text-center mt-4">
+          <a href="https://github.com/spedisrl/mod_gridGallery/archive/master.zip" class="btn btn-dark btn-download btn-lg mr-1" onclick="_gaq.push(['_trackEvent', 'Download_contactmap', 'clicked'])" title="Download">Download</a>
+          <a href="https://github.com/spedisrl/mod_gridGallery" target="_blank" class="btn btn-info btn-github btn-lg ml-1" title="Vedi su GitHub">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <section id="demo">
+      <div class="container">
+        <h3 class="text-left title-section">Demo</h3>
+      </div>
+
+      <!-- start #demo-1 -->
+      <div id="demo-1">
+        <div class="container">
+          <h3 class="display-4 mt-5 mb-3">Grid Layout + Magnific Popup</h3>
+        </div>
+
+        <section class="gallery-module grid-layout wrapper gid-123">
+        	<div class="container">
+        		<div class="row grid-gallery">
+
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 image" style="height: 200px">
+      					<figure style="margin:2px">
+      						<a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/photo-1498036882173-b41c28a8ba34?auto=format&fit=crop&w=700&q=80">
+      							<img src="https://images.unsplash.com/photo-1498036882173-b41c28a8ba34?auto=format&fit=crop&w=700&q=80" alt="">
+      							<figcaption class="d-flex justify-content-center align-items-center" style="background-color:#000">
+      								<p class="mb-0 text-center" style="color:#fff">Image title</p>
+      							</figcaption>
+      						</a>
+      					</figure>
+      				</div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 image" style="height: 200px">
+      					<figure style="margin:2px">
+      						<a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/photo-1455459182396-ae46100617cb?auto=format&fit=crop&w=1489&q=80">
+      							<img src="https://images.unsplash.com/photo-1455459182396-ae46100617cb?auto=format&fit=crop&w=1489&q=80" alt="">
+      							<figcaption class="d-flex justify-content-center align-items-center" style="background-color:#000">
+      								<p class="mb-0 text-center" style="color:#fff">Image title</p>
+      							</figcaption>
+      						</a>
+      					</figure>
+      				</div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 image" style="height: 200px">
+      					<figure style="margin:2px">
+      						<a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1350&q=80">
+      							<img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1350&q=80" alt="">
+      							<figcaption class="d-flex justify-content-center align-items-center" style="background-color:#000">
+      								<p class="mb-0 text-center" style="color:#fff">Image title</p>
+      							</figcaption>
+      						</a>
+      					</figure>
+      				</div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 image" style="height: 200px">
+      					<figure style="margin:2px">
+      						<a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=1350&q=80">
+      							<img src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=1350&q=80" alt="">
+      							<figcaption class="d-flex justify-content-center align-items-center" style="background-color:#000">
+      								<p class="mb-0 text-center" style="color:#fff">Image title</p>
+      							</figcaption>
+      						</a>
+      					</figure>
+      				</div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 image" style="height: 200px">
+      					<figure style="margin:2px">
+      						<a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/photo-1493134799591-2c9eed26201a?auto=format&fit=crop&w=1350&q=80">
+      							<img src="https://images.unsplash.com/photo-1493134799591-2c9eed26201a?auto=format&fit=crop&w=1350&q=80" alt="">
+      							<figcaption class="d-flex justify-content-center align-items-center" style="background-color:#000">
+      								<p class="mb-0 text-center" style="color:#fff">Image title</p>
+      							</figcaption>
+      						</a>
+      					</figure>
+      				</div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 image" style="height: 200px">
+      					<figure style="margin:2px">
+      						<a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/photo-1504556106489-6d450910aeb3?auto=format&fit=crop&w=1367&q=80">
+      							<img src="https://images.unsplash.com/photo-1504556106489-6d450910aeb3?auto=format&fit=crop&w=1367&q=80" alt="">
+      							<figcaption class="d-flex justify-content-center align-items-center" style="background-color:#000">
+      								<p class="mb-0 text-center" style="color:#fff">Image title</p>
+      							</figcaption>
+      						</a>
+      					</figure>
+      				</div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 image" style="height: 200px">
+      					<figure style="margin:2px">
+      						<a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg?auto=format&fit=crop&w=1961&q=80">
+      							<img src="https://images.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg?auto=format&fit=crop&w=1961&q=80" alt="">
+      							<figcaption class="d-flex justify-content-center align-items-center" style="background-color:#000">
+      								<p class="mb-0 text-center" style="color:#fff">Image title</p>
+      							</figcaption>
+      						</a>
+      					</figure>
+      				</div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 image" style="height: 200px">
+      					<figure style="margin:2px">
+      						<a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/photo-1495542779398-9fec7dc7986c?auto=format&fit=crop&w=1268&q=80">
+      							<img src="https://images.unsplash.com/photo-1495542779398-9fec7dc7986c?auto=format&fit=crop&w=1268&q=80" alt="">
+      							<figcaption class="d-flex justify-content-center align-items-center" style="background-color:#000">
+      								<p class="mb-0 text-center" style="color:#fff">Image title</p>
+      							</figcaption>
+      						</a>
+      					</figure>
+      				</div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 image" style="height: 200px">
+      					<figure style="margin:2px">
+      						<a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/uploads/1413259835094dcdeb9d3/6e609595?auto=format&fit=crop&w=1352&q=80">
+      							<img src="https://images.unsplash.com/uploads/1413259835094dcdeb9d3/6e609595?auto=format&fit=crop&w=1352&q=80" alt="">
+      							<figcaption class="d-flex justify-content-center align-items-center" style="background-color:#000">
+      								<p class="mb-0 text-center" style="color:#fff">Image title</p>
+      							</figcaption>
+      						</a>
+      					</figure>
+      				</div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 image" style="height: 200px">
+      					<figure style="margin:2px">
+      						<a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/photo-1433024730544-5f8e3e2cc6c8?auto=format&fit=crop&w=634&q=80">
+      							<img src="https://images.unsplash.com/photo-1433024730544-5f8e3e2cc6c8?auto=format&fit=crop&w=634&q=80" alt="">
+      							<figcaption class="d-flex justify-content-center align-items-center" style="background-color:#000">
+      								<p class="mb-0 text-center" style="color:#fff">Image title</p>
+      							</figcaption>
+      						</a>
+      					</figure>
+      				</div>
+
+
+        		</div>
+        	</div>
+        </section>
+
+      </div>
+      <!-- end #demo-1 -->
+
+      <!-- start #demo-2 -->
+      <div id="demo-2">
+        <div class="container">
+          <h3 class="display-4 mt-5 mb-3">Masonry grid + Magnific Popup</h3>
+        </div>
+
+        <section class="gallery-module grid-masonry-layout wrapper gid-456">
+        	<div class="container">
+        		<div class="row grid-gallery">
+        			<div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 image grid-sizer"></div>
+
+      				<div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 image grid-item">
+      					<figure style="margin:2px">
+                  <a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/photo-1498036882173-b41c28a8ba34?auto=format&fit=crop&w=700&q=80">
+      							<img src="https://images.unsplash.com/photo-1498036882173-b41c28a8ba34?auto=format&fit=crop&w=700&q=80" class="img-fluid" alt="">
+      							<figcaption class="d-flex justify-content-center align-items-center" style="background-color:#000">
+      								<p class="mb-0 text-center" style="color:#fff">Titlo immagine</p>
+      							</figcaption>
+      						</a>
+      					</figure>
+      				</div>
+
+              <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 image grid-item" >
+      					<figure style="margin:2px">
+      						<a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/photo-1455459182396-ae46100617cb?auto=format&fit=crop&w=1489&q=80">
+      							<img src="https://images.unsplash.com/photo-1455459182396-ae46100617cb?auto=format&fit=crop&w=1489&q=80" class="img-fluid" alt="">
+      							<figcaption class="d-flex justify-content-center align-items-center" style="background-color:#000">
+      								<p class="mb-0 text-center" style="color:#fff">Image title</p>
+      							</figcaption>
+      						</a>
+      					</figure>
+      				</div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 image grid-item" >
+      					<figure style="margin:2px">
+      						<a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1350&q=80">
+      							<img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1350&q=80" class="img-fluid" alt="">
+      							<figcaption class="d-flex justify-content-center align-items-center" style="background-color:#000">
+      								<p class="mb-0 text-center" style="color:#fff">Image title</p>
+      							</figcaption>
+      						</a>
+      					</figure>
+      				</div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 image grid-item" >
+      					<figure style="margin:2px">
+      						<a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=1350&q=80">
+      							<img src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=1350&q=80" class="img-fluid" alt="">
+      							<figcaption class="d-flex justify-content-center align-items-center" style="background-color:#000">
+      								<p class="mb-0 text-center" style="color:#fff">Image title</p>
+      							</figcaption>
+      						</a>
+      					</figure>
+      				</div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 image grid-item" >
+      					<figure style="margin:2px">
+      						<a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/photo-1493134799591-2c9eed26201a?auto=format&fit=crop&w=1350&q=80">
+      							<img src="https://images.unsplash.com/photo-1493134799591-2c9eed26201a?auto=format&fit=crop&w=1350&q=80" class="img-fluid" alt="">
+      							<figcaption class="d-flex justify-content-center align-items-center" style="background-color:#000">
+      								<p class="mb-0 text-center" style="color:#fff">Image title</p>
+      							</figcaption>
+      						</a>
+      					</figure>
+      				</div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 image grid-item" >
+      					<figure style="margin:2px">
+      						<a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/photo-1504556106489-6d450910aeb3?auto=format&fit=crop&w=1367&q=80">
+      							<img src="https://images.unsplash.com/photo-1504556106489-6d450910aeb3?auto=format&fit=crop&w=1367&q=80" class="img-fluid" alt="">
+      							<figcaption class="d-flex justify-content-center align-items-center" style="background-color:#000">
+      								<p class="mb-0 text-center" style="color:#fff">Image title</p>
+      							</figcaption>
+      						</a>
+      					</figure>
+      				</div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 image grid-item" >
+      					<figure style="margin:2px">
+      						<a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg?auto=format&fit=crop&w=1961&q=80">
+      							<img src="https://images.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg?auto=format&fit=crop&w=1961&q=80" class="img-fluid" alt="">
+      							<figcaption class="d-flex justify-content-center align-items-center" style="background-color:#000">
+      								<p class="mb-0 text-center" style="color:#fff">Image title</p>
+      							</figcaption>
+      						</a>
+      					</figure>
+      				</div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 image grid-item" >
+      					<figure style="margin:2px">
+      						<a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/photo-1495542779398-9fec7dc7986c?auto=format&fit=crop&w=1268&q=80">
+      							<img src="https://images.unsplash.com/photo-1495542779398-9fec7dc7986c?auto=format&fit=crop&w=1268&q=80" class="img-fluid" alt="">
+      							<figcaption class="d-flex justify-content-center align-items-center" style="background-color:#000">
+      								<p class="mb-0 text-center" style="color:#fff">Image title</p>
+      							</figcaption>
+      						</a>
+      					</figure>
+      				</div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 image grid-item" >
+      					<figure style="margin:2px">
+      						<a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/uploads/1413259835094dcdeb9d3/6e609595?auto=format&fit=crop&w=1352&q=80">
+      							<img src="https://images.unsplash.com/uploads/1413259835094dcdeb9d3/6e609595?auto=format&fit=crop&w=1352&q=80" class="img-fluid" alt="">
+      							<figcaption class="d-flex justify-content-center align-items-center" style="background-color:#000">
+      								<p class="mb-0 text-center" style="color:#fff">Image title</p>
+      							</figcaption>
+      						</a>
+      					</figure>
+      				</div>
+
+
+
+        		</div>
+        	</div>
+        </section>
+
+      </div>
+      <!-- end #demo-2 -->
+
+      <!-- start #demo-3 -->
+      <div id="demo-3">
+        <div class="container">
+          <h3 class="display-4 mt-5 mb-3">Masonry grid + Isotope filter + Magnific Popup</h3>
+        </div>
+
+        <section class="gallery-module wrapper grid-isotope-layout gid-789">
+        	<div class="container-fluid">
+        		<div class="row">
+        			<div class="col-12 text-center button-group filter-button-group">
+        				<button class="btn btn-outline-primary" data-filter="*">Tutte</button>
+        					<button class="btn btn-outline-primary" data-filter=".day">Day</button>
+                  <button class="btn btn-outline-primary" data-filter=".night">Night</button>
+        			</div>
+        		</div>
+        		<div class="row grid-gallery mt-5">
+        			<div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 image grid-sizer"></div>
+
+              <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 image grid-item night">
+      					<figure style="margin:2px">
+                  <a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/photo-1498036882173-b41c28a8ba34?auto=format&fit=crop&w=700&q=80">
+      							<img src="https://images.unsplash.com/photo-1498036882173-b41c28a8ba34?auto=format&fit=crop&w=700&q=80" class="img-fluid" alt="">
+      							<figcaption class="d-flex justify-content-center align-items-center" style="background-color:#000">
+      								<p class="mb-0 text-center" style="color:#fff">Titlo immagine</p>
+      							</figcaption>
+      						</a>
+      					</figure>
+      				</div>
+
+              <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 image grid-item night" >
+      					<figure style="margin:2px">
+      						<a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/photo-1455459182396-ae46100617cb?auto=format&fit=crop&w=1489&q=80">
+      							<img src="https://images.unsplash.com/photo-1455459182396-ae46100617cb?auto=format&fit=crop&w=1489&q=80" class="img-fluid" alt="">
+      							<figcaption class="d-flex justify-content-center align-items-center" style="background-color:#000">
+      								<p class="mb-0 text-center" style="color:#fff">Image title</p>
+      							</figcaption>
+      						</a>
+      					</figure>
+      				</div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 image grid-item day" >
+      					<figure style="margin:2px">
+      						<a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1350&q=80">
+      							<img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1350&q=80" class="img-fluid" alt="">
+      							<figcaption class="d-flex justify-content-center align-items-center" style="background-color:#000">
+      								<p class="mb-0 text-center" style="color:#fff">Image title</p>
+      							</figcaption>
+      						</a>
+      					</figure>
+      				</div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 image grid-item night" >
+      					<figure style="margin:2px">
+      						<a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=1350&q=80">
+      							<img src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=1350&q=80" class="img-fluid" alt="">
+      							<figcaption class="d-flex justify-content-center align-items-center" style="background-color:#000">
+      								<p class="mb-0 text-center" style="color:#fff">Image title</p>
+      							</figcaption>
+      						</a>
+      					</figure>
+      				</div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 image grid-item day" >
+      					<figure style="margin:2px">
+      						<a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/photo-1493134799591-2c9eed26201a?auto=format&fit=crop&w=1350&q=80">
+      							<img src="https://images.unsplash.com/photo-1493134799591-2c9eed26201a?auto=format&fit=crop&w=1350&q=80" class="img-fluid" alt="">
+      							<figcaption class="d-flex justify-content-center align-items-center" style="background-color:#000">
+      								<p class="mb-0 text-center" style="color:#fff">Image title</p>
+      							</figcaption>
+      						</a>
+      					</figure>
+      				</div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 image grid-item night" >
+      					<figure style="margin:2px">
+      						<a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/photo-1504556106489-6d450910aeb3?auto=format&fit=crop&w=1367&q=80">
+      							<img src="https://images.unsplash.com/photo-1504556106489-6d450910aeb3?auto=format&fit=crop&w=1367&q=80" class="img-fluid" alt="">
+      							<figcaption class="d-flex justify-content-center align-items-center" style="background-color:#000">
+      								<p class="mb-0 text-center" style="color:#fff">Image title</p>
+      							</figcaption>
+      						</a>
+      					</figure>
+      				</div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 image grid-item day" >
+      					<figure style="margin:2px">
+      						<a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg?auto=format&fit=crop&w=1961&q=80">
+      							<img src="https://images.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg?auto=format&fit=crop&w=1961&q=80" class="img-fluid" alt="">
+      							<figcaption class="d-flex justify-content-center align-items-center" style="background-color:#000">
+      								<p class="mb-0 text-center" style="color:#fff">Image title</p>
+      							</figcaption>
+      						</a>
+      					</figure>
+      				</div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 image grid-item day" >
+      					<figure style="margin:2px">
+      						<a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/photo-1495542779398-9fec7dc7986c?auto=format&fit=crop&w=1268&q=80">
+      							<img src="https://images.unsplash.com/photo-1495542779398-9fec7dc7986c?auto=format&fit=crop&w=1268&q=80" class="img-fluid" alt="">
+      							<figcaption class="d-flex justify-content-center align-items-center" style="background-color:#000">
+      								<p class="mb-0 text-center" style="color:#fff">Image title</p>
+      							</figcaption>
+      						</a>
+      					</figure>
+      				</div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 image grid-item day" >
+      					<figure style="margin:2px">
+      						<a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/uploads/1413259835094dcdeb9d3/6e609595?auto=format&fit=crop&w=1352&q=80">
+      							<img src="https://images.unsplash.com/uploads/1413259835094dcdeb9d3/6e609595?auto=format&fit=crop&w=1352&q=80" class="img-fluid" alt="">
+      							<figcaption class="d-flex justify-content-center align-items-center" style="background-color:#000">
+      								<p class="mb-0 text-center" style="color:#fff">Image title</p>
+      							</figcaption>
+      						</a>
+      					</figure>
+      				</div>
+
+        		</div>
+        	</div>
+        </section>
+
+      </div>
+      <!-- end #demo-3 -->
+
+      <!-- start #demo-4 -->
+      <div id="demo-4">
+        <div class="container">
+          <h3 class="display-4 mt-5 mb-3">Swiper auto slide + Magnific Popup</h3>
+        </div>
+
+        <section class="gallery-module slide-auto-layout wrapper gid-159">
+        	<div class="container-fluid">
+        		<div class="row grid-gallery">
+        			<!-- Swiper -->
+        		  <div class="swiper-container">
+        		    <div class="swiper-wrapper">
+
+      			      <div class="swiper-slide">
+                    <a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/photo-1498036882173-b41c28a8ba34?auto=format&fit=crop&w=700&q=80">
+        							<img src="https://images.unsplash.com/photo-1498036882173-b41c28a8ba34?auto=format&fit=crop&w=700&q=80" alt="" style="height: 400px">
+      							</a>
+      						</div>
+                  <div class="swiper-slide">
+                    <a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/photo-1455459182396-ae46100617cb?auto=format&fit=crop&w=1489&q=80">
+        							<img src="https://images.unsplash.com/photo-1455459182396-ae46100617cb?auto=format&fit=crop&w=1489&q=80" alt="" style="height: 400px">
+      							</a>
+      						</div>
+                  <div class="swiper-slide">
+                    <a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1350&q=80">
+        							<img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1350&q=80" alt="" style="height: 400px">
+      							</a>
+      						</div>
+                  <div class="swiper-slide">
+                    <a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=1350&q=80">
+        							<img src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=1350&q=80" alt="" style="height: 400px">
+      							</a>
+      						</div>
+                  <div class="swiper-slide">
+                    <a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg?auto=format&fit=crop&w=1961&q=80">
+        							<img src="https://images.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg?auto=format&fit=crop&w=1961&q=80" alt="" style="height: 400px">
+      							</a>
+      						</div>
+                  <div class="swiper-slide">
+                    <a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/photo-1495542779398-9fec7dc7986c?auto=format&fit=crop&w=1268&q=80">
+        							<img src="https://images.unsplash.com/photo-1495542779398-9fec7dc7986c?auto=format&fit=crop&w=1268&q=80" alt="" style="height: 400px">
+      							</a>
+      						</div>
+                  <div class="swiper-slide">
+                    <a class="magnific-overlay" title="Image title" href="https://images.unsplash.com/photo-1504556106489-6d450910aeb3?auto=format&fit=crop&w=1367&q=80">
+        							<img src="https://images.unsplash.com/photo-1504556106489-6d450910aeb3?auto=format&fit=crop&w=1367&q=80" alt="" style="height: 400px">
+      							</a>
+      						</div>
+
+        		    </div>
+        		  </div>
+
+        		</div>
+        	</div>
+        </section>
+
+      </div>
+      <!-- end #demo-4 -->
+
+    </section>
+
+    <section id="option" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h3 class="text-left title-section">Opzioni</h3>
+            <ul>
+              <li>4 different layout</li>
+              <li>Container or Full container gallery</li>
+              <li>Random image option</li>
+              <li>Margin image set</li>
+              <li>Masonry or grid mode</li>
+              <li>Multi-album select</li>
+              <li>Image limit</li>
+              <li>Image overlay change color</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="download" class="bg-light py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h3 class="text-left title-section">Download</h3>
+            <a href="https://github.com/spedisrl/mod_gridGallery/archive/master.zip" class="btn btn-dark btn-download btn-lg mr-1" onclick="_gaq.push(['_trackEvent', 'Download_contactmap', 'clicked'])" title="Download">Download</a>
+            <a href="https://github.com/spedisrl/mod_gridGallery" target="_blank" class="btn btn-info btn-github btn-lg ml-1" title="Vedi su GitHub">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="license" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h3 class="title-section">Licenza</h3>
+            <p class="lead">GNU/GPL license: <a href="http://www.gnu.org/copyleft/gpl.html" class="btn btn-link">http://www.gnu.org/copyleft/gpl.html</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="credits" class="bg-dark">
+      <div class="footer-top bg-light py-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center">
+              <h3 class="text-left title-section">Crediti</h3>
+              <a href="https://www.spedi.it" target="_blank" title="SPEDI srl">
+                <img src="https://www.spedi.it/images/spedi-brand/SPEDI_logo_color_full.png" height="100" alt="SPEDI srl">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container py-2">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p class="text-light lead m-0">SPEDI s.r.l. V.le Marconi 72/e, 13045 Gattinara VC - Italia | Tel: +39 0163/835328 Email: info@spedi.it</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/f2be1f91af.js"></script>
+
+
+    <script type="text/javascript">
+    jQuery(document).ready(function($){
+
+      // demo-1
+      $('.grid-layout.gid-123 .grid-gallery').magnificPopup({
+  	    delegate:'a.magnific-overlay',
+  	    type:'image',
+  	    gallery:{enabled:true}
+  	  })
+
+      // demo-2
+      $('.grid-masonry-layout.gid-456 .grid-gallery').magnificPopup({
+        delegate:'a.magnific-overlay',
+        type:'image',
+        gallery:{enabled:true}
+      })
+
+      if($('.grid-masonry-layout.gid-456 .grid-gallery').length){
+  			var grid = $('.grid-masonry-layout.gid-456 .grid-gallery').masonry({
+  				itemSelector: '.grid-item',
+  				columnWidth: '.grid-sizer',
+  				percentPosition: true
+  			});
+
+  			grid.imagesLoaded().progress( function() {
+  				grid.masonry('layout');
+  			});
+  		}
+
+      // demo-3
+      $('.grid-isotope-layout.gid-789 .grid-gallery').magnificPopup({
+  	    delegate:'a.magnific-overlay',
+  	    type:'image',
+  	    gallery:{enabled:true}
+  	  })
+
+      var grid = $('.grid-isotope-layout.gid-789 .grid-gallery').isotope({
+  		  // set itemSelector so .grid-sizer is not used in layout
+  		  itemSelector: '.grid-item',
+  		  percentPosition: true,
+  		  masonry: {
+  		    columnWidth: '.grid-sizer'
+  		  }
+  		})
+
+  		// filter items on button click
+  		$('.grid-isotope-layout.gid-789 .filter-button-group').on( 'click', 'button', function() {
+  		  var filterValue = $(this).attr('data-filter');
+  		  grid.isotope({ filter: filterValue });
+  		});
+
+  		// layout Isotope after each image loads
+  		grid.imagesLoaded().progress( function() {
+  		  grid.isotope('layout');
+  		});
+
+      // demo-4
+      var swiper = new Swiper('.slide-auto-layout.gid-159 .grid-gallery .swiper-container', {
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+  			loop: true
+      });
+
+
+      $('.slide-auto-layout.gid-159 .grid-gallery').magnificPopup({
+        delegate:'a.magnific-overlay',
+        type:'image',
+        gallery:{enabled:true}
+      })
+
+
+
+
+    });
+
+    </script>
+
+  </body>
+</html>
