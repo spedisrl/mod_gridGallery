@@ -13,7 +13,7 @@ Grid Gallery - Joomla Module (SPEDI srl)
  * [Swiper](http://idangero.us/swiper/)
 
 ## Installazione
- * Per installare Contact Map scarica prima lo zip da [qui](https://github.com/spedisrl/mod_gridGallery/archive/master.zip)
+ * Per installare Grid Gallery scarica prima lo zip da [qui](https://github.com/spedisrl/mod_gridGallery/archive/master.zip)
  * Accedi al pannello di controllo di Joomla
  * Estensioni > Gestione > Installa
  * Installa il .zip
