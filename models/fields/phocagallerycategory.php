@@ -9,9 +9,9 @@
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2 or later;
  */
 defined('_JEXEC') or die();
-if(!defined('DS')) define('DS', DIRECTORY_SEPARATOR);
+// if(!defined('DS')) define('DS', DIRECTORY_SEPARATOR);
 if (! class_exists('PhocaGalleryLoader')) {
-    require_once( JPATH_ADMINISTRATOR.DS.'components'.DS.'com_phocagallery'.DS.'libraries'.DS.'loader.php');
+    require_once( JPATH_ADMINISTRATOR.DIRECTORY_SEPARATOR.'components'.DIRECTORY_SEPARATOR.'com_phocagallery'.DIRECTORY_SEPARATOR.'libraries'.DIRECTORY_SEPARATOR.'loader.php');
 }
 phocagalleryimport('phocagallery.html.category');
 
@@ -20,7 +20,7 @@ class JFormFieldPhocaGalleryCategory extends JFormField
 	protected $type 		= 'PhocaGallery';
 
 	protected function getInput() {
-		
+
 		$db = JFactory::getDBO();
 
        //build the list of categories
@@ -30,9 +30,11 @@ class JFormFieldPhocaGalleryCategory extends JFormField
 		. ' ORDER BY a.ordering';
 		$db->setQuery( $query );
 		$phocagallerys = $db->loadObjectList();
-	
+
 		// TODO - check for other views than category edit
-		$view 	= JRequest::getVar( 'view' );
+		// $view 	= JRequest::getVar( 'view' );
+    $view = JFactory::getApplication()->input->get('view');
+    var_dump($view);
 		$catId	= -1;
 		if ($view == 'phocagalleryc') {
 			$id 	= $this->form->getValue('id'); // id of current category
@@ -40,12 +42,12 @@ class JFormFieldPhocaGalleryCategory extends JFormField
 				$catId = $id;
 			}
 		}
-		
+
 		$tree = array();
 		$text = '';
 		$tree = PhocaGalleryCategory::CategoryTreeOption($phocagallerys, $tree, 0, $text, $catId);
 		//array_unshift($tree, JHTML::_('select.option', '', '- '.JText::_('MOD_PHOCAGALLERY_SELECT_CATEGORY').' -', 'value', 'text'));
-		
+
 		return JHTML::_('select.genericlist',  $tree,  $this->name, 'class="inputbox" size="4" multiple="multiple"', 'value', 'text', $this->value, $this->id );
 	}
 }

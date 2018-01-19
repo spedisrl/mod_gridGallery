@@ -31,7 +31,6 @@ class ModGridGallery
 			$queryCatid[] = 'p.catid = '.$catid[$i];
 		}
 		$queryCatid = " (".implode(' OR ', $queryCatid).") ";
-		//var_dump($queryCatid);
 
 		// ciclo sulle eventuali foto selezionate
 		if(!is_null($image)){
@@ -41,7 +40,6 @@ class ModGridGallery
 				$queryImage[] = 'p.id = '.$temp[$i];
 			}
 			$queryImage = " (".implode(' OR ', $queryImage).") ";
-			//var_dump($queryImage);
 		}
 
 		// Create a new query object.

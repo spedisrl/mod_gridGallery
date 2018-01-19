@@ -9,12 +9,12 @@
 
 defined('_JEXEC') or die;
 
-if(!defined('DS')) define('DS', DIRECTORY_SEPARATOR);
+// if(!defined('DS')) define('DS', DIRECTORY_SEPARATOR);
 if (!JComponentHelper::isEnabled('com_phocagallery', true)) {
-	return JError::raiseError(JText::_('Phoca Gallery Error'), JText::_('Phoca Gallery is not installed on your system'));
+	return JFactory::getApplication()->enqueueMessage(JText::_('Phoca Gallery is not installed on your system'), 'error');
 }
 if (! class_exists('PhocaGalleryLoader')) {
-    require_once( JPATH_ADMINISTRATOR.DS.'components'.DS.'com_phocagallery'.DS.'libraries'.DS.'loader.php');
+    require_once( JPATH_ADMINISTRATOR.DIRECTORY_SEPARATOR.'components'.DIRECTORY_SEPARATOR.'com_phocagallery'.DIRECTORY_SEPARATOR.'libraries'.DIRECTORY_SEPARATOR.'loader.php');
 }
 phocagalleryimport('phocagallery.path.path');
 phocagalleryimport('phocagallery.path.route');
