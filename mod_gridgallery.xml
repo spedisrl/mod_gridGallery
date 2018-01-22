@@ -213,6 +213,6 @@
 
     </config>
 	<updateservers>
-		<server type="extension" priority="1" name="Spedi Grid Gallery Module">http://test.spedi.it/update/mod_gridGallery.xml</server>
+		<server type="extension" priority="1" name="Spedi Grid Gallery Module">http://update.spedi.it/mod_gridGallery.xml</server>
 	</updateservers>
 </extension>
