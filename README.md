@@ -23,8 +23,8 @@ Grid Gallery - Joomla Module (SPEDI srl)
 [Demo qui](https://spedisrl.github.io/mod_gridGallery/)
 
 ## Traduzioni disponibili
-[Tedesco (by Benno)](http://www.reisefotografien.eu/downloads/file/308-de-de-mod-gridgallery-j3-zip)
-[Inglese (by Benno)](http://www.reisefotografien.eu/downloads/file/310-en-gb-mod-gridgallery-j3-zip)
+ * [Tedesco (by Benno)](http://www.reisefotografien.eu/downloads/file/308-de-de-mod-gridgallery-j3-zip)
+ * [Inglese (by Benno)](http://www.reisefotografien.eu/downloads/file/310-en-gb-mod-gridgallery-j3-zip)
 
 ## Licenza
 GNU/GPL license [http://www.gnu.org/copyleft/gpl.html](http://www.gnu.org/copyleft/gpl.html)
