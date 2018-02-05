@@ -63,7 +63,7 @@ phocagalleryimport('phocagallery.library.library');
 
 				<?php $hidden = ''; ?>
 				<?php if($k > 10) : ?>
-					<?php $hidden = 'd-none'; ?>
+					<?php $hidden = 'd-none d-md-block'; ?>
 				<?php endif; ?>
 
 				<div class="col-6 col-sm-6 col-md-4 col-lg-<?php echo $col ?> col-xl-<?php echo $col ?> image <?php echo $hidden ?>" style="height: <?php echo $height ?>px">
